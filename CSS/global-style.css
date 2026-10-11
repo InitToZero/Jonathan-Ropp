@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+}
+
+.site-header {
+    background-color: #0056b3;
+    color: #fff;
+    text-align: left;
+    padding: 24px 16px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.main-navigation {
+    background-color: #e5edf7;
+    color: #333;
+    text-align: center;
+    padding: 12px 16px;
+}
+
+.main-navigation p {
+    margin: 0;
+}
+
+.main-navigation nav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 10px;
+}
+
+.main-navigation a {
+    color: #0056b3;
+    font-weight: bold;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+#main-content {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.personal-blog {
+    max-width: 1080px;
+    padding-top: 48px;
+    padding-bottom: 56px;
+}
+
+.about-article {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+    align-items: center;
+    gap: 48px;
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 28px rgb(24 54 89 / 8%);
+}
+
+.about-main h2,
+.section-heading h2 {
+    margin: 0 0 16px;
+    color: #173b63;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.15;
+}
+
+.about-main p:last-child {
+    max-width: 58ch;
+    margin-bottom: 0;
+    color: #536273;
+}
+
+.eyebrow,
+.achievement-label {
+    margin: 0 0 10px;
+    color: #0056b3;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.about-photo {
+    margin: 0;
+}
+
+.about-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.about-photo figcaption {
+    margin-top: 8px;
+    color: #687789;
+    font-size: 0.8rem;
+    text-align: right;
+}
+
+.achievements {
+    margin-top: 56px;
+}
+
+.section-heading {
+    margin-bottom: 24px;
+}
+
+.section-heading h2 {
+    margin-bottom: 0;
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.achievement-card {
+    padding: 28px;
+    background-color: #fff;
+    border: 1px solid #e0e7ef;
+    border-radius: 10px;
+}
+
+.achievement-card h3 {
+    margin: 0 0 12px;
+    color: #173b63;
+}
+
+.achievement-card p:last-child {
+    margin-bottom: 0;
+    color: #536273;
+}
+
+@media (max-width: 700px) {
+    .personal-blog {
+        padding-top: 24px;
+    }
+
+    .about-article {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 24px;
+    }
+
+    .about-photo img {
+        max-height: 420px;
+        aspect-ratio: 4 / 5;
+    }
+
+    .achievements {
+        margin-top: 40px;
+    }
+
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+}
