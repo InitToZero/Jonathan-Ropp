@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Photos | Jonathan Ropp</title>
         <link rel="stylesheet" href="CSS/global-style.css">
+        <link rel="stylesheet" href="CSS/photos-style.css">
         <script src="JavaScript/headers.js" defer></script>
+        <script src="JavaScript/photos.js" defer></script>
     </head>
     <body>
         <header class="site-header">
@@ -15,7 +17,15 @@
             <nav aria-label="Main navigation" data-site-navigation></nav>
         </header>
         <main>
-            <p>Great things start small...</p>
+            <section class="photo-gallery" aria-labelledby="photos-heading">
+                <p class="eyebrow">Gallery</p>
+                <h2 id="photos-heading">Photos</h2>
+                <p class="photo-gallery-intro">A few moments from along the way.</p>
+                <!-- <p class="photo-gallery-status" data-photo-status role="status" aria-live="polite">Loading photos...</p> -->
+                <!-- <div class="photo-grid" data-photo-grid></div> -->
+                <!--<button onclick="GetPhoto(new Request('/photos/Gif1.gif'))">Test Button</button>-->
+
+            </section>
         </main>
     </body>
     </html>
