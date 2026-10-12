@@ -1,4 +1,4 @@
-{
+/*{
     "$schema": "./node_modules/wrangler/config-schema.json",
     "name": "jonathan-ropp-website",
     "main": "src/JavaScript/photos.js",
@@ -11,4 +11,4 @@
             "bucket_name": "r2photos"
         }
     ]
-}
+}*/
