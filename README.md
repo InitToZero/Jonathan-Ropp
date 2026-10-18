@@ -1,2 +1,2 @@
 # Jonathan-Ropp
-Jonathan Ropp's website
+Visit https://jonathanropp.com/ to see this site and learn a bit about me! 
