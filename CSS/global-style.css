@@ -91,16 +91,6 @@ p {
     color: #536273;
 }
 
-.eyebrow,
-.achievement-label {
-    margin: 0 0 10px;
-    color: #0056b3;
-    font-size: 0.8rem;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-
 .about-photo {
     margin: 0;
 }
@@ -132,29 +122,6 @@ p {
     margin-bottom: 0;
 }
 
-.achievement-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-}
-
-.achievement-card {
-    padding: 28px;
-    background-color: #fff;
-    border: 1px solid #e0e7ef;
-    border-radius: 10px;
-}
-
-.achievement-card h3 {
-    margin: 0 0 12px;
-    color: #173b63;
-}
-
-.achievement-card p:last-child {
-    margin-bottom: 0;
-    color: #536273;
-}
-
 @media (max-width: 700px) {
     .personal-blog {
         padding-top: 24px;
@@ -171,11 +138,4 @@ p {
         aspect-ratio: 4 / 5;
     }
 
-    .achievements {
-        margin-top: 40px;
-    }
-
-    .achievement-grid {
-        grid-template-columns: 1fr;
-    }
 }

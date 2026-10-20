@@ -1,0 +1,249 @@
+.professional-page {
+    max-width: 1080px;
+    padding-top: 48px;
+    padding-bottom: 72px;
+}
+
+.professional-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+    align-items: center;
+    gap: 56px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 28px rgb(24 54 89 / 8%);
+}
+
+.professional-intro-copy {
+    padding: 12px 0;
+}
+
+.professional-eyebrow {
+    margin: 0 0 12px;
+    color: #0056b3;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.professional-intro h2,
+.career-section-heading h2 {
+    margin: 0 0 18px;
+    color: #173b63;
+    font-size: clamp(2rem, 4.5vw, 3.25rem);
+    line-height: 1.1;
+}
+
+.professional-intro-copy > p:not(.professional-eyebrow) {
+    max-width: 58ch;
+    margin: 0;
+    color: #536273;
+}
+
+.timeline-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    color: #0056b3;
+    font-weight: 700;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.professional-portrait {
+    margin: 0;
+}
+
+.professional-portrait img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.professional-portrait figcaption {
+    margin-top: 8px;
+    color: #687789;
+    font-size: 0.8rem;
+    text-align: right;
+}
+
+.career-section {
+    margin-top: 64px;
+}
+
+.career-section-heading {
+    max-width: 680px;
+    margin-bottom: 32px;
+}
+
+.career-section-heading h2 {
+    margin-bottom: 12px;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.career-section-heading > p:last-child {
+    margin: 0;
+    color: #536273;
+}
+
+.career-timeline {
+    position: relative;
+    display: grid;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.career-timeline::before {
+    position: absolute;
+    top: 28px;
+    bottom: 28px;
+    left: 15px;
+    width: 2px;
+    background-color: #c9d9eb;
+    content: "";
+}
+
+.career-milestone {
+    position: relative;
+    display: grid;
+    grid-template-columns: 32px minmax(0, 1fr);
+    align-items: start;
+    gap: 20px;
+}
+
+.milestone-marker {
+    z-index: 1;
+    width: 18px;
+    height: 18px;
+    margin: 24px 0 0 7px;
+    background-color: #0056b3;
+    border: 4px solid #f4f4f4;
+    border-radius: 50%;
+    box-sizing: content-box;
+}
+
+.milestone-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(200px, 30%);
+    align-items: center;
+    gap: 24px;
+    padding: 24px 28px;
+    background-color: #fff;
+    border: 1px solid #e2e9f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgb(24 54 89 / 5%);
+}
+
+.milestone-photo {
+    width: 100%;
+    margin: 0;
+    border-radius: 8px;
+}
+
+.milestone-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.milestone-photo-placeholder {
+    display: grid;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    place-items: center;
+    overflow: hidden;
+    color: #687789;
+    background-color: #f4f7fa;
+    border: 1px dashed #c9d9eb;
+    border-radius: 8px;
+    font-size: 0.85rem;
+}
+
+.milestone-photo figcaption {
+    margin-top: 6px;
+    color: #687789;
+    font-size: 0.75rem;
+    text-align: right;
+}
+
+.milestone-year {
+    display: block;
+    margin-bottom: 10px;
+    color: #173b63;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.milestone-year-placeholder {
+    color: #687789;
+}
+
+.milestone-label {
+    margin: 0 0 8px;
+    color: #0056b3;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.milestone-card h3 {
+    margin: 0 0 8px;
+    color: #173b63;
+    font-size: 1.25rem;
+}
+
+.milestone-card > p:last-child {
+    max-width: 66ch;
+    margin: 0;
+    color: #536273;
+}
+
+@media (max-width: 700px) {
+    .professional-page {
+        padding-top: 24px;
+        padding-bottom: 48px;
+    }
+
+    .professional-intro {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 24px;
+    }
+
+    .professional-intro-copy {
+        padding: 0;
+    }
+
+    .career-section {
+        margin-top: 48px;
+    }
+
+    .career-milestone {
+        grid-template-columns: 24px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .career-timeline::before {
+        left: 11px;
+    }
+
+    .milestone-marker {
+        margin-left: 3px;
+    }
+
+    .milestone-card {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+}
