@@ -1,7 +1,6 @@
 const headers = [
     //{ label: "Home", href: "home-page.html" },
     { label: "About", href: "about.html" },
-    { label: "Photos", href: "photos.html" },
     { label: "Professional", href: "professional.html" }
 ];
 
