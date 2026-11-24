@@ -5,7 +5,7 @@ const RECIPE_TABLE = "tbl_recipes";
 const RECIPE_COLUMNS = "uid_primary_key,txt_title,txt_description,txt_chef,jsb_ingredients,jsb_directions,jsb_notes,txt_photo_path,uid_created_by,tmz_created_at,uid_updated_by,tmz_updated_at,bool_active";
 const PHOTO_BUCKET = "recipe-photos";
 const MAX_PHOTO_SIZE = 5 * 1024 * 1024;
-const allowedPhotoTypes = new Set(["image/jpeg", "image/png", "image/webp"]);
+const ALLOWED_PHOTO_TYPES = new Set(["image/jpeg", "image/png", "image/webp"]);
 
 const statusMessage = document.querySelector("#recipe-status");
 const formStatus = document.querySelector("#form-status");
@@ -240,7 +240,7 @@ if (!hasConfiguration) {
 
         try {
             if (selectedFile) {
-                if (!allowedPhotoTypes.has(selectedFile.type)) {
+                if (!ALLOWED_PHOTO_TYPES.has(selectedFile.type)) {
                     throw new Error("Choose a JPG, PNG, or WebP image.");
                 }
                 if (selectedFile.size > MAX_PHOTO_SIZE) {
@@ -257,8 +257,6 @@ if (!hasConfiguration) {
                 jsb_directions: splitLines(formFields.directions.value),
                 jsb_notes: splitLines(formFields.notes.value),
                 txt_photo_path: photoPath,
-                uid_updated_by: currentUser.id,
-                tmz_updated_at: new Date().toISOString(),
             };
             const recipeId = formFields.id.value;
             const query = recipeId
