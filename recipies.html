@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Recipes | Jonathan Ropp</title>
+    <link rel="stylesheet" href="CSS/global-style.css">
+    <link rel="stylesheet" href="CSS/recipies-style.css">
+    <script src="JavaScript/headers.js" defer></script>
+    <script type="module" src="JavaScript/recipes.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <h1>Jonathan Ropp</h1>
+    </header>
+    <header class="main-navigation">
+        <nav aria-label="Main navigation" data-site-navigation></nav>
+    </header>
+    <main class="main recipes-main">
+        <header class="recipes-heading">
+            <p class="eyebrow">From my table to yours</p>
+            <h2>Jonathan's Recipes</h2>
+            <p>A collection of Jonathan's favorite recipes worth sharing. If you'd like to add a recipe, tell Jonathan your email to get added to the list of invited users.</p>
+        </header>
+
+        <section class="recipe-access" aria-labelledby="access-title">
+            <div class="recipe-access-copy">
+                <h2 id="access-title">Recipe Edit Access</h2>
+                <p id="recipe-status" role="status" aria-live="polite">Connecting to the recipe collection...</p>
+                <p class="recipe-user" id="recipe-user" hidden></p>
+            </div>
+            <form class="recipe-sign-in" id="sign-in-form">
+                <label for="sign-in-email">Invited user email</label>
+                <div class="recipe-sign-in-controls">
+                    <input id="sign-in-email" name="email" type="email" autocomplete="email" required>
+                    <button type="submit">Email me a sign-in link</button>
+                </div>
+            </form>
+            <div class="recipe-session-actions" id="session-actions" hidden>
+                <button class="button-secondary" id="sign-out-button" type="button">Sign out</button>
+            </div>
+        </section>
+
+        <section class="recipe-editor" id="recipe-editor" aria-labelledby="editor-title" hidden>
+            <div class="recipe-editor-heading">
+                <div>
+                    <p class="eyebrow">Recipe Editors</p>
+                    <h2 id="editor-title">Add a recipe</h2>
+                </div>
+                <button class="button-secondary" id="new-recipe-button" type="button">New recipe</button>
+            </div>
+            <form id="recipe-form">
+                <input id="recipe-id" name="id" type="hidden">
+                <div class="recipe-form-grid">
+                    <label>
+                        Recipe name
+                        <input id="recipe-name" name="title" type="text" maxlength="160" required>
+                    </label>
+                    <label>
+                        Original Chef
+                        <input id="recipe-chef" name="chef" type="text" maxlength="120">
+                    </label>
+                    <label>
+                        Recipe Description
+                        <textarea id="recipe-description" name="description" rows="3"></textarea>
+                    </label>
+                    <label>
+                        Ingredients <span class="form-hint">One ingredient per line</span>
+                        <textarea id="recipe-ingredients" name="ingredients" rows="7" required></textarea>
+                    </label>
+                    <label>
+                        Directions <span class="form-hint">One step per line</span>
+                        <textarea id="recipe-directions" name="directions" rows="7" required></textarea>
+                    </label>
+                    <label>
+                        Notes <span class="form-hint">Optional; one note per line</span>
+                        <textarea id="recipe-notes" name="notes" rows="4"></textarea>
+                    </label>
+                    <label>
+                        Recipe photo <span class="form-hint">Optional; JPG, PNG, or WebP up to 5 MB</span>
+                        <input id="recipe-photo" name="photo" type="file" accept="image/jpeg,image/png,image/webp">
+                    </label>
+                </div>
+                <div class="recipe-form-actions">
+                    <button type="submit">Save recipe</button>
+                    <p id="form-status" role="status" aria-live="polite"></p>
+                </div>
+            </form>
+        </section>
+
+        <div class="recipe-layout">
+            <aside class="recipe-sidebar" aria-labelledby="recipe-list-title">
+                <h2 id="recipe-list-title">Recipe list</h2>
+                <nav aria-label="Recipes">
+                    <ul class="recipe-list" id="recipe-list">
+                        <li class="recipe-list-empty">Loading recipes...</li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <article class="recipe-card" id="recipe-card" aria-live="polite">
+                <p class="recipe-empty">Recipes will appear here.</p>
+            </article>
+        </div>
+    </main>
+</body>
+</html>
