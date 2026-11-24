@@ -17,11 +17,26 @@
         <nav aria-label="Main navigation" data-site-navigation></nav>
     </header>
     <main class="main recipes-main">
-        <header class="recipes-heading">
+        <section class="recipes-heading" aria-labelledby="recipes-title">
             <p class="eyebrow">From my table to yours</p>
-            <h2>Jonathan's Recipes</h2>
+            <h2 id="recipes-title">Jonathan's Recipes</h2>
             <p>A collection of Jonathan's favorite recipes worth sharing. If you'd like to add a recipe, tell Jonathan your email to get added to the list of invited users.</p>
-        </header>
+        </section>
+
+        <div class="recipe-layout">
+            <aside class="recipe-sidebar" aria-labelledby="recipe-list-title">
+                <h2 id="recipe-list-title">Recipe list</h2>
+                <nav aria-label="Recipes">
+                    <ul class="recipe-list" id="recipe-list">
+                        <li class="recipe-list-empty">Loading recipes...</li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <article class="recipe-card" id="recipe-card" aria-live="polite">
+                <p class="recipe-empty">Recipes will appear here.</p>
+            </article>
+        </div>
 
         <section class="recipe-access" aria-labelledby="access-title">
             <div class="recipe-access-copy">
@@ -87,21 +102,6 @@
                 </div>
             </form>
         </section>
-
-        <div class="recipe-layout">
-            <aside class="recipe-sidebar" aria-labelledby="recipe-list-title">
-                <h2 id="recipe-list-title">Recipe list</h2>
-                <nav aria-label="Recipes">
-                    <ul class="recipe-list" id="recipe-list">
-                        <li class="recipe-list-empty">Loading recipes...</li>
-                    </ul>
-                </nav>
-            </aside>
-
-            <article class="recipe-card" id="recipe-card" aria-live="polite">
-                <p class="recipe-empty">Recipes will appear here.</p>
-            </article>
-        </div>
     </main>
 </body>
 </html>

@@ -17,6 +17,10 @@ h1 {
 }
 
 .main-navigation {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
     background-color: #e5edf7;
     color: #333;
     text-align: center;
@@ -29,14 +33,26 @@ h1 {
 
 .main-navigation nav {
     display: flex;
+    grid-column: 2;
     justify-content: center;
     gap: 24px;
-    margin-top: 10px;
+}
+
+.main-navigation .github-link {
+    grid-column: 3;
+    justify-self: end;
+    color: #687789;
+    font-size: 0.6rem;
 }
 
 .main-navigation a {
     color: #0056b3;
     font-weight: bold;
+}
+
+.main-navigation a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
 }
 
 main {
@@ -89,6 +105,16 @@ p {
     max-width: 58ch;
     margin-bottom: 0;
     color: #536273;
+}
+
+.article-link {
+    display: block;
+    width: fit-content;
+    margin-top: 12px;
+    color: #0056b3;
+    font-weight: 700;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
 }
 
 .article-photo {
@@ -158,6 +184,20 @@ p {
 }
 
 @media (max-width: 700px) {
+    .main-navigation {
+        grid-template-columns: minmax(0, 1fr) auto;
+        row-gap: 12px;
+    }
+
+    .main-navigation nav {
+        grid-column: 1 / -1;
+    }
+
+    .main-navigation .github-link {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
     .main {
         padding-top: 24px;
     }
